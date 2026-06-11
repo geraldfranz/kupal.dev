@@ -1,9 +1,9 @@
 const About = ({ isDark }) => {
   const stats = [
-    { label: 'Members', value: '5' },
+    { label: 'Members', value: '6' },
     { label: 'Technologies', value: '15+' },
     { label: 'Projects', value: '20+' },
-    { label: 'Energy', value: '∞' },
+    { label: 'Coffee', value: '∞' },
   ];
 
   const sectionBg = isDark ? 'bg-dark-950' : 'bg-slate-100';
