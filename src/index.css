@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer components {
+  .cursor-target {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-red {
+    @apply shadow-lg shadow-red-500/50;
+  }
+  
+  .glow-blue {
+    @apply shadow-lg shadow-blue-500/50;
+  }
+  
+  .glow-pink {
+    @apply shadow-lg shadow-pink-500/50;
+  }
+  
+  .glow-violet {
+    @apply shadow-lg shadow-violet-500/50;
+  }
+
+  .hover-glow-white:hover {
+    box-shadow: 0 12px 40px rgba(255,255,255,0.22);
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.theme-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle at top left, rgba(239, 68, 68, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.16), transparent 26%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(10, 10, 15, 0.95));
+  animation: moveBG 18s ease-in-out infinite;
+}
+
+.theme-background.light {
+  background: radial-gradient(circle at top left, rgba(239, 68, 68, 0.16), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.16), transparent 26%),
+    linear-gradient(135deg, rgba(248, 250, 252, 0.96), rgba(241, 245, 249, 0.98));
+}
+
+@keyframes moveBG {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+  }
+  50% {
+    background-position: 20% 10%, 80% 90%, 50% 50%;
+  }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.animate-sway {
+  animation: sway 1.8s ease-in-out infinite;
+}
+
+/* Light-mode black hover glow utility */
+.hover-glow-black:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Slight scale helper for projects when hovered as group */
+.project-scale {
+  transform: scale(1.01);
+}
