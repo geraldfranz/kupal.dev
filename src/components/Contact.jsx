@@ -28,6 +28,7 @@ const Contact = ({ isDark }) => {
         <div className="flex gap-4 justify-center flex-col sm:flex-row">
           <a
             href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCFTfPtVfpVTQSlqNCLxpSTmXJXGtQLCxlfWmvfpsQRkFHRCSwncnLVbnjThgbcgBwSCKg"
+            target="_blank"
             className={`cursor-target px-8 py-4 rounded-card font-semibold transition-all transform hover:-translate-y-1 ${primaryButton}`}
           >
             Send Message
