@@ -19,6 +19,7 @@ const Contact = ({ isDark }) => {
 
         <a
           href="mailto:hello@kupal.dev"
+          target="_blank"
           className="cursor-target inline-block font-mono font-bold text-lg sm:text-xl text-accent-red hover:text-red-400 transition-colors mb-8 group"
         >
           hello@kupal.dev
